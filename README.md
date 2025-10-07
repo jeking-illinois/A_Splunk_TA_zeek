@@ -1,16 +1,6 @@
-# splunk_private-app_template
-Template layout of custom private apps to be installed to illinois.splunkcloud.com
+# A_Splunk_TA_zeek
+Sidecar app for Corelight's TA for Zeek https://splunkbase.splunk.com/app/5466
 
 ### NOTES
-1) No /local folder
-2) Update /default/app.conf 's "label" & "description"
-3) /lookups can be added, anything there is "permanent"
-4) Name of app follows following format:
-   * **AAA\_conf-\<file\>\_[stanza]\_{setting, optional}\_(value, optional)**
-   * **AAA\_conf\_\<description\>\_{additional optional descriptions}**
-6) Update this section with official Splunk documentation about the file & stanza that is being managed
-7) Every time an app needs to be re-validated & uploaded, increment the "version" value in app.conf
-8) App prefix used for different "types" of custom apss
-  * **AAA** = .conf files and configurations
-  * **AA** = management apps
-  * **A** = sidecar apps of existing Splunkbase apps
+2025/10/7 - props.conf
+- adding FIELDALIAS to account for modern data coming in with a dot instead of underscore, ie id.orig_h vs id_orig_h
